@@ -1,6 +1,8 @@
 body {
     font-family: sans-serif;
     padding: 0.4rem;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
 .table-outer-container {
