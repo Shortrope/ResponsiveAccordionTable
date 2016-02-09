@@ -1,112 +1,126 @@
 body {
-    font-family: sans-serif;
-    padding: 0.4rem;
-    max-width: 960px;
-    margin: 0 auto;
+  font-family: sans-serif;
+  padding: 0.4rem;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .table-outer-container {
-    background-color: #bbb;
-    margin-bottom: 1.4rem;
-    padding: 0.1rem 1rem 1rem;
-    border-radius: 8px 8px 0 0;
-}
-
-.table-inner-container {
-    max-height: 300px;
-    overflow-y: auto;
-}
-
-table {
-    border: 0;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-thead {
-    background-color: #333;
-    color: #f3f3f3;
-    display: none;
-}
-thead th {
-    padding: 0.4em 1em;
-}
-
-tbody tr:nth-child(even) {
-    background-color: #e9e9e9;
-}
-tbody tr:nth-child(odd) {
-    background-color: #fff;
-}
-
-td {
-    border: 0;
-    margin-top: 2em;
-    padding: 0.4em 1em 0.4em 1.4em;
-    display: block;
-    position: relative;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #666;
-}
-
-td:before {
-    color: #333;
-    font-style: italic;
-    position: absolute;
-    left: 0;
-    top: -1.4em;
-    padding-left: 0.6em;
-}
-td:nth-child(1):before {
-    content: "Project:";
-}
-td:nth-child(2):before {
-    content: "Role:";
-}
-td:nth-child(3):before {
-    content: "Producer/director:";
+  /*    background-color: #bbb;*/
+  margin-bottom: 1.4rem;
+  padding: 0.1rem 1rem 1rem;
+  border-radius: 8px 8px 0 0;
 }
 
 .table-title {
-    font-size: 1.4em;
-    font-weight: bold;
-    border-bottom: 4px solid #888;
-    margin-bottom: 0;
+  padding-left: 0.4em;
 }
 
-caption { display: none; }
+.table-inner-container {
+  max-height: 300px;
+  overflow-y: auto;
+}
 
+table {
+  border: 0;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+thead {
+  background-color: #333;
+  color: #f3f3f3;
+  display: none;
+}
+
+thead th {
+  padding: 0.4em 1em;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e9e9e9;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+td {
+  border: 0;
+  margin-top: 2em;
+  padding: 0.4em 1em 0.4em 1.4em;
+  display: block;
+  position: relative;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #666;
+}
+
+td:before {
+  color: #333;
+  font-style: italic;
+  position: absolute;
+  left: 0;
+  top: -1.4em;
+  padding-left: 0.6em;
+}
+
+td:nth-child(1):before {
+  content: "Project:";
+}
+
+td:nth-child(2):before {
+  content: "Role:";
+}
+
+td:nth-child(3):before {
+  content: "Producer/director:";
+}
+
+.table-title {
+  font-size: 1.4em;
+  font-weight: bold;
+  border-bottom: 4px solid #888;
+  margin-bottom: 0;
+}
+
+caption {
+  display: none;
+}
 
 @media screen and (min-width: 480px) {
-    body { padding: 1rem; }
-    td { 
-        text-align: center; 
-        margin-top: 0;
-        border-top: 0;
-        text-align: right;
-    }
-    td:before {
-        top: 0.4em;
-    }
+  body {
+    padding: 1rem;
+  }
+  td {
+    text-align: center;
+    margin-top: 0;
+    border-top: 0;
+    text-align: right;
+  }
+  td:before {
+    top: 0.4em;
+  }
 }
 
 @media screen and (min-width: 680px) {
-    .table-inner-container {
-        max-height: none;
-        overflow-y: visible;
-    }
-    thead { display: table-header-group; }
-    td {
-        text-align: left;
-        display: table-cell;
-    }
-    td:nth-child(1):before {
-        content: "";
-    }
-    td:nth-child(2):before {
-        content: "";
-    }
-    td:nth-child(3):before {
-        content: ""
-    }
+  .table-inner-container {
+    max-height: none;
+    overflow-y: visible;
+  }
+  thead {
+    display: table-header-group;
+  }
+  td {
+    text-align: left;
+    display: table-cell;
+  }
+  td:nth-child(1):before {
+    content: "";
+  }
+  td:nth-child(2):before {
+    content: "";
+  }
+  td:nth-child(3):before {
+    content: ""
+  }
 }

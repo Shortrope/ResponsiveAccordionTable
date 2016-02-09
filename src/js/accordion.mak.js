@@ -152,6 +152,8 @@ document.addEventListener('DOMContentLoaded', function () {
         srcs = aTargetIds[tId].sources;
         for (i = 0; i < srcs.length; i += 1) {
           srcs[i].removeEventListener('click', accordionAction);
+          aTargetIds[tId].sources[i].classList.remove('accordion-open');
+          aTargetIds[tId].sources[i].classList.remove('accordion-closed');
         }
       }
     }
