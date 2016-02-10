@@ -28,10 +28,10 @@ document.addEventListener('DOMContentLoaded', function () {
   =============================================== */
   var singleOpen = true, // single or multiple items open at same time
     icons = true, // show +/- icons
-    aTriggerWidth = 680,
+    aTriggerWidth = 680, // Width in px, when accordion is applied
     aSources, // array of source elements
     aTargetIds = {}, // object that stores target info
-    isAccordionApplied = false;
+    isAccordionApplied = false; // **Do not change this value.**
 
 
   /* FUNCTIONS 
