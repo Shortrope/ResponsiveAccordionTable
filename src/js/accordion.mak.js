@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
   =============================================== */
   var singleOpen = true, // single or multiple items open at same time
     icons = true, // show +/- icons
-    aTriggerWidth = 680, // Width in px, when accordion is applied
+    aTriggerWidth = 680, // Width in px, when accordion is applied/removed
     aSources, // array of source elements
     aTargetIds = {}, // object that stores target info
     isAccordionApplied = false; // **Do not change this value.**
@@ -154,6 +154,7 @@ document.addEventListener('DOMContentLoaded', function () {
           srcs[i].removeEventListener('click', accordionAction);
           aTargetIds[tId].sources[i].classList.remove('accordion-open');
           aTargetIds[tId].sources[i].classList.remove('accordion-closed');
+          aTargetIds[tId].sources[i].classList.add('accordion-off');
         }
       }
     }

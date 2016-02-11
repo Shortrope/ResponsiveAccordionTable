@@ -6,10 +6,8 @@ body {
 }
 
 .table-outer-container {
-  /*    background-color: #bbb;*/
   margin-bottom: 1.4rem;
   padding: 0.1rem 1rem 1rem;
-  border-radius: 8px 8px 0 0;
 }
 
 .table-title {
@@ -19,6 +17,7 @@ body {
 .table-inner-container {
   max-height: 300px;
   overflow-y: auto;
+  /* show vert scroll bar */
 }
 
 table {
@@ -27,32 +26,41 @@ table {
   width: 100%;
 }
 
-thead {
-  background-color: #333;
-  color: #f3f3f3;
-  display: none;
-}
-
 thead th {
   padding: 0.4em 1em;
-}
-
-tbody tr:nth-child(even) {
-  background-color: #e9e9e9;
 }
 
 tbody tr:nth-child(odd) {
   background-color: #fff;
 }
 
+tbody tr:nth-child(even) {
+  background-color: #e9e9e9;
+}
+
+
+/****************************************
+ * Mobile first:
+ * These styles apply to a screen < 480px
+ ***************************************/
+
+thead {
+  background-color: #333;
+  color: #f3f3f3;
+  /* mobile does not display table headings */
+  display: none;
+}
+
 td {
   border: 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #666;
+  /* < 480px pushes table data below the table header */
   margin-top: 2em;
   padding: 0.4em 1em 0.4em 1.4em;
   display: block;
+  /* td:before can be positioned absolutely */
   position: relative;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #666;
 }
 
 td:before {
@@ -86,6 +94,42 @@ td:nth-child(3):before {
 caption {
   display: none;
 }
+
+
+/**********************************
+ * Accordion helper classes
+ *********************************/
+
+.accordion-target {
+  overflow: hidden;
+  transition: height 0.5s;
+}
+
+.accordion-open,
+.accordion-closed {
+  cursor: pointer;
+}
+
+.accordion-open:before {
+  content: '- ';
+}
+
+.accordion-closed:before {
+  content: '+ ';
+}
+
+.accordion-off {
+  cursor: auto;
+}
+
+.accordion-off:before {
+  content: '';
+}
+
+
+/******************************************
+ *  Media Queries
+ *****************************************/
 
 @media screen and (min-width: 480px) {
   body {
