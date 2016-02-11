@@ -80,6 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
         zeroHeight(tId);
         if (icons) {
           for (i = 0; i < aTargetIds[tId].sources.length; i += 1) {
+            aTargetIds[tId].sources[i].classList.remove('accordion-off');
             aTargetIds[tId].sources[i].classList.remove('accordion-open');
             aTargetIds[tId].sources[i].classList.add('accordion-closed');
           }
@@ -103,6 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (aTargetIds.hasOwnProperty(prop)) {
           if (icons) {
             for (i = 0; i < aTargetIds[prop].sources.length; i += 1) {
+              //              aTargetIds[tId].sources[i].classList.remove('accordion-off');
               aTargetIds[prop].sources[i].classList.remove('accordion-open');
               aTargetIds[prop].sources[i].classList.add('accordion-closed');
             }
@@ -125,6 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
       theTarget.style.height = '0';
       if (icons) {
         for (i = 0; i < aTargetIds[tId].sources.length; i += 1) {
+          //          aTargetIds[tId].sources[i].classList.remove('accordion-off');
           aTargetIds[tId].sources[i].classList.remove('accordion-open');
           aTargetIds[tId].sources[i].classList.add('accordion-closed');
         }
