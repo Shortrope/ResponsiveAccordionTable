@@ -5,36 +5,36 @@ body {
   margin: 0 auto;
 }
 
-.table-outer-container {
+.rat {
   margin-bottom: 1.4rem;
   padding: 0.1rem 1rem 1rem;
 }
 
-.table-title {
+.rat .table-title {
   padding-left: 0.4em;
 }
 
-.table-inner-container {
+.rat .table-inner-container {
   max-height: 300px;
   overflow-y: auto;
   /* show vert scroll bar */
 }
 
-table {
+.rat table {
   border: 0;
   border-collapse: collapse;
   width: 100%;
 }
 
-thead th {
+.rat thead th {
   padding: 0.4em 1em;
 }
 
-tbody tr:nth-child(odd) {
+.rat tbody tr:nth-child(odd) {
   background-color: #fff;
 }
 
-tbody tr:nth-child(even) {
+.rat tbody tr:nth-child(even) {
   background-color: #e9e9e9;
 }
 
@@ -44,14 +44,14 @@ tbody tr:nth-child(even) {
  * These styles apply to a screen < 480px
  ***************************************/
 
-thead {
+.rat thead {
   background-color: #333;
   color: #f3f3f3;
   /* mobile does not display table headings */
   display: none;
 }
 
-td {
+.rat td {
   border: 0;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #666;
@@ -63,7 +63,7 @@ td {
   position: relative;
 }
 
-td:before {
+.rat td:before {
   color: #333;
   font-style: italic;
   position: absolute;
@@ -72,26 +72,26 @@ td:before {
   padding-left: 0.6em;
 }
 
-td:nth-child(1):before {
+.rat td:nth-child(1):before {
   content: "Project:";
 }
 
-td:nth-child(2):before {
+.rat td:nth-child(2):before {
   content: "Role:";
 }
 
-td:nth-child(3):before {
+.rat td:nth-child(3):before {
   content: "Producer/director:";
 }
 
-.table-title {
+.rat .table-title {
   font-size: 1.4em;
   font-weight: bold;
   border-bottom: 4px solid #888;
   margin-bottom: 0;
 }
 
-caption {
+.rat caption {
   display: none;
 }
 
@@ -135,36 +135,35 @@ caption {
   body {
     padding: 1rem;
   }
-  td {
-    text-align: center;
+  .rat td {
+    text-align: right;
     margin-top: 0;
     border-top: 0;
-    text-align: right;
   }
-  td:before {
+  .rat td:before {
     top: 0.4em;
   }
 }
 
 @media screen and (min-width: 680px) {
-  .table-inner-container {
+  .rat .table-inner-container {
     max-height: none;
     overflow-y: visible;
   }
-  thead {
+  .rat thead {
     display: table-header-group;
   }
-  td {
+  .rat td {
     text-align: left;
     display: table-cell;
   }
-  td:nth-child(1):before {
+  .rat td:nth-child(1):before {
     content: "";
   }
-  td:nth-child(2):before {
+  .rat td:nth-child(2):before {
     content: "";
   }
-  td:nth-child(3):before {
+  .rat td:nth-child(3):before {
     content: ""
   }
 }
